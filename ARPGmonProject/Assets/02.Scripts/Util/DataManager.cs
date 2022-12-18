@@ -10,8 +10,10 @@ public class DataManager : MonoBehaviour
     [field: SerializeField] public int EP       { get; set; }
     [field: SerializeField] public int ATK      { get; set; }
     [field: SerializeField] public int DFE      { get; set; }
-    [field: SerializeField] public float EXE    { get; set; }
+    [field: SerializeField] public int EXE    { get; set; }
     // -----------------------------------------------------------------
 
-
+    public int MaxHP { get; set; }
+    public int MaxEXE { get; set; }
+    public int MaxEP = 200;
 }
