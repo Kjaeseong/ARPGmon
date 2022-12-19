@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LobbyMainUI : MonoBehaviour
 {
-
     [SerializeField] private StatusUI _status;
     [SerializeField] private LobbyMenuUI _menu;
 
@@ -17,6 +16,8 @@ public class LobbyMainUI : MonoBehaviour
     {
         _menu.gameObject.SetActive(Active);
     }
+
+    
 
 
 

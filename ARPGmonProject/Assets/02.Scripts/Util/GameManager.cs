@@ -8,6 +8,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public SceneChanger Scene { get; private set; }
     public GpsSensor Gps { get; private set; }
     public DataManager Data { get; private set; }
+    public AudioManager Audio { get; private set; }
     //--------------------------------------------------------------
 
 
@@ -16,6 +17,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         Scene = GetComponent<SceneChanger>();
         Gps = GetComponentInChildren<GpsSensor>();
         Data = GetComponent<DataManager>();
+        Audio = GetComponentInChildren<AudioManager>();
     }
 
 
