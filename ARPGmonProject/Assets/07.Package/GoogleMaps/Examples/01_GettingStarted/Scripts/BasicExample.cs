@@ -14,23 +14,27 @@ namespace Google.Maps.Examples {
   [RequireComponent(typeof(MapsService))]
   public class BasicExample : MonoBehaviour {
     [Tooltip("LatLng to load (must be set before hitting play).")]
-    public LatLng LatLng = new LatLng(40.6892199, -74.044601);
+    private LatLng _latLng = new LatLng(40.6892199, -74.044601);
+    private MapsService _mapsService;
 
     /// <summary>
     /// Use <see cref="MapsService"/> to load geometry.
     /// </summary>
-    private void Start() {
-      // Get required MapsService component on this GameObject.
-      MapsService mapsService = GetComponent<MapsService>();
+    private void Start() 
+    {
+      // TODO : LatLng..사전에 입력해야 하는지는 추가적인 테스트 필요
 
-      // Set real-world location to load.
-      mapsService.InitFloatingOrigin(LatLng);
+      _mapsService = GetComponent<MapsService>();
+      _mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
 
-      // Register a listener to be notified when the map is loaded.
-      mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
+      LoadMap(GameManager.Instance.Gps.Lat, GameManager.Instance.Gps.Lng);
+    }
 
-      // Load map with default options.
-      mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
+    public void LoadMap(double Lat, double Lng)
+    {
+      _latLng = new LatLng(Lat, Lng);
+      _mapsService.InitFloatingOrigin(_latLng);
+      _mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
     }
 
     /// <summary>
