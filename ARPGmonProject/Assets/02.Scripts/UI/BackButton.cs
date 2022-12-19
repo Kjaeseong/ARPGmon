@@ -17,9 +17,12 @@ public class BackButton : MonoBehaviour
         BackMenuActSet(true);
     }
 
-    public void BackMenuSet(GameObject BackMenu)
+    public void BackMenuSet(GameObject[] BackMenu)
     {
-        _backMenu.Add(BackMenu);
+        for(int i = 0; i < BackMenu.Length; ++i)
+        {
+            _backMenu.Add(BackMenu[i]);
+        }
     }
 
     private void BackMenuActSet(bool Active)

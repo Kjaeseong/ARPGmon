@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class LobbyMainUI : MonoBehaviour
 {
-    [SerializeField] private StatusUI _status;
-    [SerializeField] private LobbyMenuUI _menu;
+    [field: SerializeField] public StatusUI Status { get; private set; }
+    [field: SerializeField] public LobbyMenuUI Menu { get; private set; }
+    [field: SerializeField] public OptionUI Option { get; private set; }
+    [field: SerializeField] public MonsterInfoUI MonsterInfo { get; private set; }
+    [field: SerializeField] public InventoryUI Inventory { get; private set; }
 
-    private void StatusUI(bool Active)
-    {
-        _status.gameObject.SetActive(Active);
-    }
 
-    private void LobbyMenuUI(bool Active)
-    {
-        _menu.gameObject.SetActive(Active);
-    }
+
 
     
-
 
 
 }

@@ -13,10 +13,7 @@ public class OptionUI : MonoBehaviour
     private void Awake() 
     {
         _backButton.ParentUI = gameObject;
-        for(int i = 0; i < _backMenu.Length; ++i)
-        {
-            _backButton.BackMenuSet(_backMenu[i]);
-        }
+        _backButton.BackMenuSet(_backMenu);
     }
 
     private void OnEnable() 

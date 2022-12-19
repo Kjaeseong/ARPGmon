@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class LobbyMenuUI : MonoBehaviour
 {
+    private LobbyMainUI _main;
+
+    private void Start() 
+    {
+        _main = GetComponentInParent<LobbyMainUI>();
+    }
+
     public void InfoActivate()
     {
-
+        _main.MonsterInfo.gameObject.SetActive(true);
     }
 
     public void Feed()
@@ -21,12 +28,12 @@ public class LobbyMenuUI : MonoBehaviour
 
     public void OptionActivate()
     {
-
+        _main.Option.gameObject.SetActive(true);
     }
 
     public void InventoryActivate()
     {
-
+        _main.Inventory.gameObject.SetActive(true);
     }
 
     public void StartAdventure()
