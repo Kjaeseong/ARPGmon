@@ -1,0 +1,4 @@
+index,name,value,target,description
+1,HP회복약,4,Pmon,체력을 회복시켜 주는 회복약
+2,EP회복약,10,Pmon,EP를 회복시켜 주는 회복약
+3,경험치,10,Pmon,경험치를 증가시켜 주는 아이템
