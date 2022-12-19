@@ -499,6 +499,9 @@ MonoBehaviour:
   _bgm: {fileID: 8986940730989428775}
   _se: {fileID: 5698911352138610999}
   _backButton: {fileID: 6383278439104106611}
+  _backMenu:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5081034966441373528
 GameObject:
   m_ObjectHideFlags: 0

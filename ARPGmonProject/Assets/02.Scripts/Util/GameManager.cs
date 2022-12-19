@@ -11,6 +11,9 @@ public class GameManager : SingletonBehaviour<GameManager>
     public AudioManager Audio { get; private set; }
     //--------------------------------------------------------------
 
+    public GameObject PlayerMon { get; set; }
+    public GameObject Player { get; set; }
+
 
     private void Start() 
     {
