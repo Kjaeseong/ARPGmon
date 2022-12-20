@@ -13,5 +13,10 @@ public class AdventureMainUI : MonoBehaviour
         //다음 UI 실행
     }
 
+    public void MenuButton()
+    {
+        
+    }
+
 
 }
