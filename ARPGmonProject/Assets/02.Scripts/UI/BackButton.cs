@@ -12,11 +12,6 @@ public class BackButton : MonoBehaviour
         BackMenuActSet(false);
     }
 
-    private void OnDisable() 
-    {
-        BackMenuActSet(true);
-    }
-
     public void BackMenuSet(GameObject[] BackMenu)
     {
         for(int i = 0; i < BackMenu.Length; ++i)
@@ -35,6 +30,7 @@ public class BackButton : MonoBehaviour
 
     public void ExitUI()
     {
+        BackMenuActSet(true);
         ParentUI.SetActive(false);
     }
 }
