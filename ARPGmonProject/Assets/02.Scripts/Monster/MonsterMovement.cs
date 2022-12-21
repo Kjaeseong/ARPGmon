@@ -8,62 +8,106 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField][Range(0, 50)] private float _moveSpeed;
     [SerializeField] private bool _isMove;
     [SerializeField] private Animator _anim;
-    [SerializeField] private float _attackCycle;
-    private WaitForSeconds _cycle;
 
+    [SerializeField] private float _attackCycle;
+    [SerializeField] private float _coroutineCycle;
+    private WaitForSeconds _attackCorouCycle;
+    private WaitForSeconds _corouCycle;
     private Coroutine _attackCoroutine;
+    private Coroutine _moveCoroutine;
+
+    private Coroutine[] _coroutine = new Coroutine[2];
+
     private bool _isRunCoroutine;
+
+    public bool InEnemyCollider { get; set; }
 
     private void Start() 
     {
-        _cycle = new WaitForSeconds(_attackCycle);
+        _attackCorouCycle = new WaitForSeconds(_attackCycle);
+        _corouCycle = new WaitForSeconds(_coroutineCycle);
     }
 
     private void OnEnable() 
     {
-        GameManager.Instance.PlayerMon = gameObject;
+        //GameManager.Instance.PlayerMon = gameObject;
     }
 
-    public void MoveToTarget(Vector3 Target)
+    public void MoveToTarget(GameObject Target)
     {
-        transform.LookAt(Target);
+        transform.LookAt(Target.transform.position);
+        transform.Translate(transform.forward * _moveSpeed * Time.deltaTime);
+    }
 
+    private float DistToTarget(GameObject Target)
+    {
         Vector3 monsterPosition = new Vector3(transform.position.x, 0f, transform.position.z);
-        Vector3 targetPosition = new Vector3(Target.x, 0f, Target.z);
-        float Distance = Vector3.Distance(targetPosition, monsterPosition);
-
-        if(Distance > 0.5)
-        {
-            transform.Translate(transform.forward * _moveSpeed * Time.deltaTime);
-        }
-        else
-        {
-            if(TargetObject.tag == "Enemy")
-            {
-                _attackCoroutine = StartCoroutine(Attack());
-            }
-        }
+        Vector3 targetPosition = new Vector3(Target.transform.position.x, 0f, Target.transform.position.z);
+        return Vector3.Distance(targetPosition, monsterPosition);
     }
 
-    private IEnumerator Attack()
+    public void MonsterAction(GameObject Target)
     {
-        _isRunCoroutine = true;
+        StopAction();
+        _moveCoroutine = StartCoroutine(MoveCoroutine(Target));
+    }
 
+    private IEnumerator MoveCoroutine(GameObject Target)
+    {
+        _anim.SetBool("Run", true);
         while(true)
         {
-            _anim.SetTrigger("Attack");
-            yield return _cycle;
+            MoveToTarget(Target);
+
+            if(Target.tag == "Enemy")
+            {
+                Debug.Log(Target.name);
+                if(DistToTarget(Target) <= 0.5) // 임시로 거리판별 사용하였음. 추후 적 몬스터의 콜라이더에 들어가면 공격명령을 내리는 것으로 변경
+                {
+                    _anim.SetBool("Run",false);
+                    yield return _attackCoroutine = StartCoroutine(AttackCoroutine(Target));
+                    //_attackCoroutine = StartCoroutine(AttackCoroutine(Target));
+                    yield break;
+                }
+            }
+            else
+            {
+                if(DistToTarget(Target) <= 0.2)
+                {
+                    _anim.SetBool("Run",false);
+                    transform.LookAt(
+                        new Vector3(
+                            Camera.main.transform.position.x,
+                            transform.position.y,
+                            Camera.main.transform.position.z
+                        )
+                    );
+                    
+                    yield break;
+                }
+            }
+            yield return _corouCycle;
         }
     }
 
-    public void StopAttack()
+    public void StopAction()
     {
-        if(_isRunCoroutine)
+        StopAllCoroutines();
+    }
+
+    private IEnumerator AttackCoroutine(GameObject Target)
+    {
+        while(true) 
         {
-            _isRunCoroutine = false;
-            StopCoroutine(_attackCoroutine);
+            // TODO : 데미지 부여 코드 추가해야 함.
+            transform.LookAt(Target.transform.position);
+            _anim.SetTrigger("Attack");
+            yield return _attackCorouCycle;
         }
     }
+
+
+
 
 
 
