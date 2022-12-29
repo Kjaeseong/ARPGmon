@@ -10,18 +10,16 @@ public class EnemyMonsterSpawner : MonoBehaviour
     {
         [field: SerializeField] public int PoolSize { get; private set; }
         [field: SerializeField] public GameObject[] _prefabs { get; private set; }
-        public List<GameObject> Pool { get; set; }
+        public GameObject[] Pool { get; set; }
     }
 
     [SerializeField] private MonsterGroup _low;
     [SerializeField] private MonsterGroup _mid;
     [SerializeField] private MonsterGroup _high;
-
+    private Queue<GameObject> _respawnQueue = new Queue<GameObject>();
 
     [SerializeField] private float _respawnTime;
     [SerializeField] private float _respawnScope;
-
-    private Queue<GameObject> _respawnQueue = new Queue<GameObject>();
 
     private WaitForSeconds _time;
     private Coroutine _respawnCoroutine;
@@ -38,15 +36,15 @@ public class EnemyMonsterSpawner : MonoBehaviour
         CreatePool(_high._prefabs, _high.Pool, _high.PoolSize);
     }
 
-    private void CreatePool(GameObject[] MonsterArr, List<GameObject> Pool, int Size)
+    private void CreatePool(GameObject[] MonsterArr, GameObject[] Pool, int Size)
     {
-        Pool =  new List<GameObject>();
+        Pool =  new GameObject[Size];
 
         for(int i = 0; i < MonsterArr.Length; i++)
         {
             for(int j = 0; j < Size; j++)
             {
-                Pool.Add(Instantiate(MonsterArr[i]));
+                Pool[j] = Instantiate(MonsterArr[i]);
                 Pool[j].transform.parent = gameObject.transform;
                 SetPosition(Pool[j]);
             }

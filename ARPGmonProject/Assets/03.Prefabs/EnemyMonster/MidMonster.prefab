@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 4.7
-  _hp: 100
-  _attack: 5
-  _moveArea: 10
-  _DropExe: 50
+  _hp: 200
+  _attack: 15
+  _moveArea: 15
+  _DropExe: 80
