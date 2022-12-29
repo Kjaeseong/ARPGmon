@@ -6,16 +6,16 @@ using System;
 public class EnemyMonsterSpawner : MonoBehaviour
 {
     [Serializable]
-    public class MonsterGroup
+    public struct MonsterGroup
     {
         [field: SerializeField] public int PoolSize { get; private set; }
         [field: SerializeField] public GameObject[] _prefabs { get; private set; }
         public GameObject[] Pool { get; set; }
     }
 
-    [SerializeField] private MonsterGroup _low;
-    [SerializeField] private MonsterGroup _mid;
-    [SerializeField] private MonsterGroup _high;
+    [SerializeField] private MonsterGroup _lowMonsters;
+    [SerializeField] private MonsterGroup _midMonsters;
+    [SerializeField] private MonsterGroup _highMonsters;
     private Queue<GameObject> _respawnQueue = new Queue<GameObject>();
 
     [SerializeField] private float _respawnTime;
@@ -31,9 +31,9 @@ public class EnemyMonsterSpawner : MonoBehaviour
 
     private void PoolInit()
     {
-        CreatePool(_low._prefabs, _low.Pool, _low.PoolSize);
-        CreatePool(_mid._prefabs, _mid.Pool, _mid.PoolSize);
-        CreatePool(_high._prefabs, _high.Pool, _high.PoolSize);
+        CreatePool(_lowMonsters._prefabs, _lowMonsters.Pool, _lowMonsters.PoolSize);
+        CreatePool(_midMonsters._prefabs, _midMonsters.Pool, _midMonsters.PoolSize);
+        CreatePool(_highMonsters._prefabs, _highMonsters.Pool, _highMonsters.PoolSize);
     }
 
     private void CreatePool(GameObject[] MonsterArr, GameObject[] Pool, int Size)
