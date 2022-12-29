@@ -33,5 +33,16 @@ public class OptionUI : MonoBehaviour
     }
 
 
+// 보스 몬스터
+// 몬스터
+
+// 옵저버 패턴 => Reactive Programming
+// GUI Application
+// UI System
+// ViewController : 캔버스가 들고 있고, 뷰와 프리젠터를 연결하는 역할
+// View : 캔버스 첫 번째 자식 오브젝트(Empty)에 추가되며, UGUI 참조하는 역할
+// Presenter : 로직 구현
+// Model : 관련된 데이터만 가지고 있으며, 추가 기능 X, Mono State이 적용되어 있기 때문에 Model.~
+
 
 }

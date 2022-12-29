@@ -5,10 +5,27 @@ using UnityEngine;
 public class LobbyMenuUI : MonoBehaviour
 {
     private LobbyMainUI _main;
+    [SerializeField] private MonsterMovement _monster;
+    [SerializeField] private GameObject _food;
+    [SerializeField] private GameObject _sandbag;
+    [SerializeField] private float _coroutineCycle;
+    [SerializeField] private float _exitCoroutineTime;
+    [SerializeField] private GameObject _moveTarget;
+    [SerializeField] private GameObject[] _buttons;
+
+
+    private WaitForSeconds _cycle;
+    private WaitForSeconds _exitCoroutine;
+    private Coroutine _coroutine;
+    private bool _isActiveCoroutine;
+
+
 
     private void Start() 
     {
         _main = GetComponentInParent<LobbyMainUI>();
+        _cycle = new WaitForSeconds(_coroutineCycle);
+        _exitCoroutine = new WaitForSeconds(_exitCoroutineTime);
     }
 
     public void InfoActivate()
@@ -18,12 +35,14 @@ public class LobbyMenuUI : MonoBehaviour
 
     public void Feed()
     {
-        // TODO : 먹이 먹는 연출 추가, 배고픔 수치 채우기
+        _monster.MonsterAction(_food);
+        _coroutine = StartCoroutine(MonsterAction());
     }
 
     public void Training()
     {
-        // TODO : 훈련하는 연출 추가, 경험치 증가
+        _monster.MonsterAction(_sandbag);
+        _coroutine = StartCoroutine(MonsterAction());
     }
 
     public void OptionActivate()
@@ -40,4 +59,25 @@ public class LobbyMenuUI : MonoBehaviour
     {
         GameManager.Instance.Scene.Change("03.Adventure");
     }
+
+    private IEnumerator MonsterAction()
+    {
+        for(int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].SetActive(false);
+        }
+
+        yield return _exitCoroutine;
+        _monster.MonsterAction(_moveTarget);
+
+        for(int i = 0; i < _buttons.Length; ++i)
+        {
+            _buttons[i].SetActive(true);
+        }
+
+
+    }
+
+
+
 }
