@@ -13,6 +13,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public GameObject PlayerMon { get; set; }
     public GameObject Player { get; set; }
+    public GameObject TargetMon { get; set; }
 
 
     private void Start() 
