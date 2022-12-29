@@ -15,9 +15,14 @@ public class GameManager : SingletonBehaviour<GameManager>
     public GameObject Player { get; set; }
     public GameObject TargetMon { get; set; }
 
+    [field: SerializeField] public float CoroutineCycle { get; private set; }
+    public WaitForSeconds Cycle { get; private set; }
+
 
     private void Start() 
     {
+        Cycle = new WaitForSeconds(CoroutineCycle);
+
         Scene = GetComponent<SceneChanger>();
         Gps = GetComponentInChildren<GpsSensor>();
         Data = GetComponent<DataManager>();

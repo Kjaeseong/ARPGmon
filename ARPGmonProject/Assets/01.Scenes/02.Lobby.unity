@@ -775,6 +775,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5390835}
     m_Modifications:
+    - target: {fileID: 2992601221321368557, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206134310835105192, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -863,6 +867,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LobbyMainUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4097049852997145776, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399643006922223403, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845347451332527307, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5989457022067805027, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
       propertyPath: _food
       value: 
@@ -879,5 +895,9 @@ PrefabInstance:
       propertyPath: _moveTarget
       value: 
       objectReference: {fileID: 31460387}
+    - target: {fileID: 8594847880436837061, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5be5db3c0af07343a0c7dd3a509112a, type: 3}
