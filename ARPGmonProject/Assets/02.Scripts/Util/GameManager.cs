@@ -14,8 +14,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     public GameObject PlayerMon { get; set; }
     public GameObject Player { get; set; }
     public GameObject TargetMon { get; set; }
-
-    public bool MapLoadComplete { get; set; }
+    
     [field: SerializeField] public float CoroutineCycle { get; private set; }
     public WaitForSeconds Cycle { get; private set; }
 
@@ -29,11 +28,6 @@ public class GameManager : SingletonBehaviour<GameManager>
         Gps = GetComponentInChildren<GpsSensor>();
         Data = GetComponent<DataManager>();
         Audio = GetComponentInChildren<AudioManager>();
-    }
-
-    public void Init()
-    {
-        MapLoadComplete = false;
     }
 
 

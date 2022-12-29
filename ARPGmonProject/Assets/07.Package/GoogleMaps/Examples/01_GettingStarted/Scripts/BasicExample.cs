@@ -16,6 +16,7 @@ namespace Google.Maps.Examples {
     [Tooltip("LatLng to load (must be set before hitting play).")]
     private LatLng _latLng = new LatLng(40.6892199, -74.044601);
     private MapsService _mapsService;
+    private MapLoadSupporter _supporter;
 
     /// <summary>
     /// Use <see cref="MapsService"/> to load geometry.
@@ -23,7 +24,7 @@ namespace Google.Maps.Examples {
     private void Start() 
     {
       // TODO : LatLng..사전에 입력해야 하는지는 추가적인 테스트 필요
-
+      _supporter = GetComponent<MapLoadSupporter>();
       _mapsService = GetComponent<MapsService>();
       _mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
 
@@ -44,6 +45,7 @@ namespace Google.Maps.Examples {
     /// The communication between the game and the MapsSDK is done through APIs and event listeners.
     /// </remarks>
     public void OnLoaded(MapLoadedArgs args) {
+      _supporter.MapLoadComplete();
       // The Map is loaded - you can start/resume gameplay from that point.
       // The new geometry is added under the GameObject that has MapsService as a component.
     }
