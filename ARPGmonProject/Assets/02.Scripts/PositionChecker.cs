@@ -12,16 +12,6 @@ public class PositionChecker : MonoBehaviour
     private Vector2 _nowPos;
     private Vector2 _prePos;
 
-    private void Start() 
-    {
-        
-    }
-
-    private void FixedUpdate() 
-    {
-        MapMove();
-    }
-
     public void MapRotate(int Direction)
     {
         _map.transform.RotateAround(Camera.main.transform.position, Vector3.up, _rotateSpeed * Direction * Time.deltaTime);

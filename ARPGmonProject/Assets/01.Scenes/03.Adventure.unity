@@ -1021,6 +1021,7 @@ GameObject:
   - component: {fileID: 910068125}
   - component: {fileID: 910068124}
   - component: {fileID: 910068127}
+  - component: {fileID: 910068128}
   m_Layer: 0
   m_Name: Basic Example Script
   m_TagString: Untagged
@@ -1215,6 +1216,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0b68449f5c494498f0894eb2aa8a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &910068128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910068123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358a312c7af86b44da3a5532e2ce1a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingMaterial:
+  - {fileID: 2100000, guid: 9ef5dc95ac2bc354d94324236575cd81, type: 2}
+  - {fileID: 2100000, guid: 9ef5dc95ac2bc354d94324236575cd81, type: 2}
+  _playMaterial:
+  - {fileID: 2100000, guid: 02cfe5187ed84dd48b2a88e1dd5cc524, type: 2}
+  - {fileID: 2100000, guid: 02cfe5187ed84dd48b2a88e1dd5cc524, type: 2}
 --- !u!1 &933404073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,7 +1510,7 @@ RectTransform:
   - {fileID: 2009696095}
   - {fileID: 1236843312}
   m_Father: {fileID: 1204710460}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1598,11 +1617,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1232992285}
+  - {fileID: 1109113963}
   - {fileID: 216414510136431094}
   - {fileID: 1462110934}
   - {fileID: 592413061}
   - {fileID: 29998380}
-  - {fileID: 1109113963}
   m_Father: {fileID: 664932497}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2257,7 +2276,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 20
-  field of view: 60
+  field of view: 100.2
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2558,7 +2577,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1863414540}
   - component: {fileID: 1863414542}
-  - component: {fileID: 1863414541}
   m_Layer: 0
   m_Name: AirViewCam
   m_TagString: Untagged
@@ -2580,14 +2598,6 @@ Transform:
   m_Father: {fileID: 1105979923}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!81 &1863414541
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863414539}
-  m_Enabled: 1
 --- !u!20 &1863414542
 Camera:
   m_ObjectHideFlags: 0
