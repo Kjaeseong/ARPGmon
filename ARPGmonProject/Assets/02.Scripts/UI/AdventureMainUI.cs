@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AdventureMainUI : MonoBehaviour
 {
-    [field: SerializeField] public MapRotateUI MapRotateUI { get; set; }
+    [field: SerializeField] public PositionCheckerUI PositionCheckerUI { get; set; }
     [field: SerializeField] public StatusUI StatusUI { get; set; }
     [field: SerializeField] public AdventureMenuUI MenuUI { get; set; }
     [field: SerializeField] public OptionUI OptionUI { get; set; }

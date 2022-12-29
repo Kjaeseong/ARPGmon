@@ -14,6 +14,7 @@ public class PositionCheckerUI : MonoBehaviour
     private bool _isButtonDown;
     private Coroutine _buttonDownCoroutine;
     private int _direction;
+    [SerializeField] private GameObject[] _nextMenu;
 
     private void Start() 
     {
@@ -51,6 +52,10 @@ public class PositionCheckerUI : MonoBehaviour
 
     private void PositionCheckComplete()
     {
+        for(int i = 0; i < _nextMenu.Length; i++)
+        {
+            _nextMenu[i].SetActive(true);
+        }
         _checker.PositionCheckEnd();
         gameObject.SetActive(false);
     }
