@@ -7,14 +7,14 @@ public class DataManager : MonoBehaviour
     // -----------------------------육성 몬스터의 정보를 저장히기 위한 변수
     [field: SerializeField] public string Name { get; set; }
     [field: SerializeField] public int Level    { get; set; }
-    [field: SerializeField] public int HP       { get; set; }
-    [field: SerializeField] public int EP       { get; set; }
+    [field: SerializeField] public float HP       { get; set; }
+    [field: SerializeField] public float EP       { get; set; }
     [field: SerializeField] public int ATK      { get; set; }
     [field: SerializeField] public int DFE      { get; set; }
-    [field: SerializeField] public int EXE    { get; set; }
+    [field: SerializeField] public float EXE    { get; set; }
     // -----------------------------------------------------------------
 
-    public int MaxHP { get; set; }
-    public int MaxEXE { get; set; }
-    public int MaxEP = 200;
+    public float MaxHP { get; set; }
+    public float MaxEXE { get; set; }
+    public float MaxEP = 200;
 }
