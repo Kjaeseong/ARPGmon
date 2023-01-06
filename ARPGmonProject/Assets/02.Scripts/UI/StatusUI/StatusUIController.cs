@@ -10,12 +10,23 @@ public class StatusUIController : MonoBehaviour
 
     private void Start() 
     {
-        // TODO : Get Monster Stat Component
-        _view = GetComponent<StatusUIView>();
+        Init();
     }
 
-    private void Init()
+    private void OnDestroy() 
     {
+        _monsterStat.Hp.RemoveView(Hp);
+        _monsterStat.Ep.RemoveView(Ep);
+        _monsterStat.Exe.RemoveView(Exe);
+        _monsterStat.Level.RemoveView(Level);
+        _view.Evolution.onClick.RemoveListener(Evolution);
+    }
+
+    public void Init()
+    {
+        _view = GetComponent<StatusUIView>();
+        _monsterStat = GameManager.Instance.PlayerMon.GetComponent<PlayerMonsterStat>();
+
         _monsterStat.Hp.AddView(Hp);
         _monsterStat.Ep.AddView(Ep);
         _monsterStat.Exe.AddView(Exe);

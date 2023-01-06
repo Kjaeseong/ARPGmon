@@ -34,4 +34,10 @@ public class Stat<T>
     {
         _event.RemoveListener(Method);
     }
+
+    public void SaveData(T Stat)
+    {
+        _event.RemoveAllListeners();
+        Stat = Value;
+    }
 }
