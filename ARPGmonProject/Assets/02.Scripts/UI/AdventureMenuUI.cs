@@ -14,6 +14,8 @@ public class AdventureMenuUI : MonoBehaviour
         _backButton.BackMenuSet(_backMenu);
     }
 
+    //
+
     public void ActivateInventory()
     {
         _mainUI.InventoryUI.gameObject.SetActive(true);

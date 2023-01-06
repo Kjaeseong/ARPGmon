@@ -22,6 +22,7 @@ public class EnemyMonster : MonoBehaviour
     public Vector3 StartPosition { get; set; }
     private Vector3 _movePosition;
     private GameObject _lockOnTarget;
+    public EnemyMonsterSpawner Spawner { get; set; }
 
     private int _maxHp;
     private int _nowHp;
@@ -79,8 +80,7 @@ public class EnemyMonster : MonoBehaviour
 
     private void Die()
     {
-        //_playerMonStatus.GetExe(_DropExe);
-        // 상위 객체에 리스폰 요청
+        Spawner.Respawn(gameObject);
         gameObject.SetActive(false);
     }
 

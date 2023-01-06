@@ -44,7 +44,6 @@ public class PositionCheckerUI : MonoBehaviour
     {
         while(true)
         {
-            Debug.Log("Rotate");
             _checker.MapRotate(_direction);
             yield return GameManager.Instance.Cycle;
         }

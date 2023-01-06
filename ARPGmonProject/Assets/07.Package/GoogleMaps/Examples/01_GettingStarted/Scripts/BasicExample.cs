@@ -44,7 +44,8 @@ namespace Google.Maps.Examples {
     /// <remarks>
     /// The communication between the game and the MapsSDK is done through APIs and event listeners.
     /// </remarks>
-    public void OnLoaded(MapLoadedArgs args) {
+    public void OnLoaded(MapLoadedArgs args) 
+    {
       _supporter.MapLoadComplete();
       // The Map is loaded - you can start/resume gameplay from that point.
       // The new geometry is added under the GameObject that has MapsService as a component.

@@ -8,6 +8,13 @@ public class GpsSensor : MonoBehaviour
 {
     public double Lat { get; private set; }
     public double Lng { get; private set; }
+    public double Azimuth{ 
+        get
+        { 
+            Debug.Log("--");
+            return _pose.Latitude; 
+        } }
+
     private GeospatialPose _pose;
     private bool _isGpsStarted = false;
 
@@ -15,12 +22,17 @@ public class GpsSensor : MonoBehaviour
     private LocationInfo _location;
     [SerializeField] private float _retryTime;
     [SerializeField] private AREarthManager _earth;
+    private bool _isGetEarth;
 
     private void Start()
     {
         _retry = new WaitForSeconds(_retryTime);
-
         StartCoroutine(GpsStart());
+    }
+
+    private double GetA()
+    {
+        return _pose.Latitude;
     }
 
     private IEnumerator GpsStart()
@@ -62,7 +74,12 @@ public class GpsSensor : MonoBehaviour
             while (_isGpsStarted)
             {
                 NowPositionSet();
-                AzimuthSet();
+
+                if(_isGetEarth)
+                {
+                    AzimuthSet();
+                }
+
                 yield return _retry;
             }
         }
@@ -82,6 +99,19 @@ public class GpsSensor : MonoBehaviour
         _earth.CameraGeospatialPose : new GeospatialPose();
     }
 
+    public void SetEarthManager(AREarthManager Earth)
+    {
+        _earth = Earth;
+        if(Earth == null)
+        {
+            _isGetEarth = false;
+        }
+        else
+        {
+            _isGetEarth = true;
+        }
+    }
+
     //위치 서비스 종료
     public void GpsStop()
     {
@@ -98,17 +128,10 @@ public class GpsSensor : MonoBehaviour
         return new Vector2((float)Lat, (float)Lng);
     }
 
-    public double GetAzimuth()
-    {
-        return _pose.Heading;
-    }
-
     public bool GetIsGpsStart()
     {
         return _isGpsStarted;
     }
-
-
 
     /// <summary>
     /// 위/경도 기준 A에서 B까지의 거리 반환(구체 표면거리, 미터(M) 기준)

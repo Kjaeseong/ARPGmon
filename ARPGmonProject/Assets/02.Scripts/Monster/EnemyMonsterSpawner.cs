@@ -46,6 +46,9 @@ public class EnemyMonsterSpawner : MonoBehaviour
             {
                 Pool[j] = Instantiate(MonsterArr[i]);
                 Pool[j].transform.parent = gameObject.transform;
+                
+                Pool[j].GetComponent<EnemyMonster>().Spawner = this;
+
                 SetPosition(Pool[j]);
             }
         }
