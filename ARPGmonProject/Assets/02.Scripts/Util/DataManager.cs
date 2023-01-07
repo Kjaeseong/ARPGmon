@@ -14,7 +14,7 @@ public class DataManager : MonoBehaviour
     [field: SerializeField] public float EXE    { get; set; }
     // -----------------------------------------------------------------
 
-    public float MaxHP { get; set; }
-    public float MaxEXE { get; set; }
-    public float MaxEP = 200;
+    [field: SerializeField] public float MaxHP { get; set; }
+    [field: SerializeField] public float MaxEP { get; set; }
+    [field: SerializeField] public float MaxEXE { get; set; }
 }

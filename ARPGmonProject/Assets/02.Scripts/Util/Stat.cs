@@ -28,6 +28,7 @@ public class Stat<T>
     {
         _event.RemoveListener(Method);
         _event.AddListener(Method);
+        _event.Invoke();
     }
 
     public void RemoveView(UnityAction Method)

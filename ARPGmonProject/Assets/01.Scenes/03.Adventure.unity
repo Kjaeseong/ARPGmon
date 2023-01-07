@@ -530,6 +530,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204710460}
     m_Modifications:
+    - target: {fileID: 2317480878933325493, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
+      propertyPath: _monsterStat
+      value: 
+      objectReference: {fileID: 1036673148}
     - target: {fileID: 6689188875354301260, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
       propertyPath: m_Name
       value: StatusUI
@@ -1419,6 +1423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1036673147}
+  - component: {fileID: 1036673148}
   m_Layer: 0
   m_Name: PlayerMonster
   m_TagString: Untagged
@@ -1440,6 +1445,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1036673148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036673146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2c96df6f1c49b4ea83f5b53aeb7842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 0
+  _player: {fileID: 0}
+  _target: {fileID: 0}
 --- !u!1 &1105979922
 GameObject:
   m_ObjectHideFlags: 0

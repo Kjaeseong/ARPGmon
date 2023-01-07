@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class StatusUIController : MonoBehaviour
 {
     private StatusUIView _view;
-    private PlayerMonsterStat _monsterStat;
+    [SerializeField] private PlayerMonsterStat _monsterStat;
 
     private void Start() 
     {
@@ -25,8 +25,7 @@ public class StatusUIController : MonoBehaviour
     public void Init()
     {
         _view = GetComponent<StatusUIView>();
-        _monsterStat = GameManager.Instance.PlayerMon.GetComponent<PlayerMonsterStat>();
-
+        
         _monsterStat.Hp.AddView(Hp);
         _monsterStat.Ep.AddView(Ep);
         _monsterStat.Exe.AddView(Exe);
@@ -51,11 +50,11 @@ public class StatusUIController : MonoBehaviour
 
     private void Exe()
     {
-        _view.Exe.fillAmount = _monsterStat.Ep.Value / _monsterStat.MaxExe.Value;
+        _view.Exe.fillAmount = _monsterStat.Exe.Value / _monsterStat.MaxExe.Value;
     }
 
     private void Level()
     {
-        _view.Level.text = _monsterStat.Level.ToString();
+        _view.Level.text = _monsterStat.Level.Value.ToString();
     }
 }

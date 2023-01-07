@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayerMonsterStat : MonoBehaviour
 {
-    public Stat<string> Name { get; set; }
-    public Stat<int> Level { get; set; }
-    public Stat<float> MaxHp { get; set; }
-    public Stat<float> Hp { get; set; }
-    public Stat<float> MaxEp { get; set; }
-    public Stat<float> Ep { get; set; }
-    public Stat<float> MaxExe { get; set; }
-    public Stat<float> Exe { get; set; }
-    public Stat<int> Atk { get; set; }
-    public Stat<int> Dfe { get; set; }
+    public Stat<string> Name { get; set; } = new Stat<string>(GameManager.Instance.Data.Name);
+    public Stat<int> Level { get; set; } = new Stat<int>(GameManager.Instance.Data.Level);
+    public Stat<float> MaxHp { get; set; } = new Stat<float>(GameManager.Instance.Data.MaxHP);
+    public Stat<float> Hp { get; set; } = new Stat<float>(GameManager.Instance.Data.HP);
+    public Stat<float> MaxEp { get; set; } = new Stat<float>(GameManager.Instance.Data.MaxEP);
+    public Stat<float> Ep { get; set; } = new Stat<float>(GameManager.Instance.Data.EP);
+    public Stat<float> MaxExe { get; set; } = new Stat<float>(GameManager.Instance.Data.MaxEXE);
+    public Stat<float> Exe { get; set; } = new Stat<float>(GameManager.Instance.Data.EXE);
+    public Stat<int> Atk { get; set; } = new Stat<int>(GameManager.Instance.Data.ATK);
+    public Stat<int> Dfe { get; set; } = new Stat<int>(GameManager.Instance.Data.DFE);
 
     [SerializeField] private float _moveSpeed;
     public float MoveSpeed { get; set; }
@@ -21,23 +21,22 @@ public class PlayerMonsterStat : MonoBehaviour
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _target;
 
-    private void OnEnable() 
+    private void Start()
     {
         Init();
     }
 
     private void Init()
     {
-        Name = new Stat<string>(GameManager.Instance.Data.Name);
-        Level = new Stat<int>(GameManager.Instance.Data.Level);
-        Hp = new Stat<float>(GameManager.Instance.Data.HP);
-        MaxHp = new Stat<float>(GameManager.Instance.Data.MaxHP);
-        Ep = new Stat<float>(GameManager.Instance.Data.EP);
-        MaxEp = new Stat<float>(GameManager.Instance.Data.MaxEP);
-        Exe = new Stat<float>(GameManager.Instance.Data.EXE);
-        MaxExe = new Stat<float>(GameManager.Instance.Data.MaxEXE);
-        Atk = new Stat<int>(GameManager.Instance.Data.ATK);
-        Dfe = new Stat<int>(GameManager.Instance.Data.DFE);
+        
+    }
+
+    private void Update() 
+    {
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            Hp.Value += 10;
+        }
     }
 
 
