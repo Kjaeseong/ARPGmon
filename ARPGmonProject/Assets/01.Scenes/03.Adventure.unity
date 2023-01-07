@@ -534,14 +534,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StatusUI
       objectReference: {fileID: 0}
-    - target: {fileID: 6689188875354301260, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6689188875354301262, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
-      propertyPath: _evolusionButtonActivate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6689188875354301263, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -640,13 +632,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &592413063 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6689188875354301262, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2317480878933325493, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
   m_PrefabInstance: {fileID: 592413060}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592413062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f9c307ca8a7f94ebeaca0d09645236, type: 3}
+  m_Script: {fileID: 11500000, guid: e750272478bf3ec419977a387a355138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &647935699
@@ -3196,7 +3188,7 @@ PrefabInstance:
     - target: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
       propertyPath: _backMenu.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 592413062}
     - target: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
       propertyPath: _backMenu.Array.data[1]
       value: 

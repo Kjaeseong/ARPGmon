@@ -32,28 +32,28 @@ public class MonsterInfoUI : MonoBehaviour
 
     private void RefreshText()
     {
-        TextSet((int)StatusText.NAME, GameManager.Instance.Data.Name);
-        TextSet((int)StatusText.LEVEL, GameManager.Instance.Data.Level);
+        // TextSet((int)StatusText.NAME, GameManager.Instance.Data.Name);
+        // TextSet((int)StatusText.LEVEL, GameManager.Instance.Data.Level);
         
-        TextSet(
-            (int)StatusText.HP, 
-            GameManager.Instance.Data.Level,
-            GameManager.Instance.Data.MaxHP
-        );
+        // TextSet(
+        //     (int)StatusText.HP, 
+        //     GameManager.Instance.Data.Level,
+        //     GameManager.Instance.Data.MaxHP
+        // );
 
-        TextSet(
-            (int)StatusText.EP, 
-            GameManager.Instance.Data.Level,
-            GameManager.Instance.Data.MaxEP
-        );
-        TextSet(
-            (int)StatusText.EXE, 
-            GameManager.Instance.Data.Level,
-            GameManager.Instance.Data.MaxEXE
-        );
+        // TextSet(
+        //     (int)StatusText.EP, 
+        //     GameManager.Instance.Data.Level,
+        //     GameManager.Instance.Data.MaxEP
+        // );
+        // TextSet(
+        //     (int)StatusText.EXE, 
+        //     GameManager.Instance.Data.Level,
+        //     GameManager.Instance.Data.MaxEXE
+        // );
         
-        TextSet((int)StatusText.ATK, GameManager.Instance.Data.Level);
-        TextSet((int)StatusText.DFE, GameManager.Instance.Data.Level);
+        // TextSet((int)StatusText.ATK, GameManager.Instance.Data.Level);
+        // TextSet((int)StatusText.DFE, GameManager.Instance.Data.Level);
     }
 
 
