@@ -143,6 +143,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485062546830224330}
+  - component: {fileID: 1711275339734432205}
+  - component: {fileID: 2287479366635486259}
   m_Layer: 0
   m_Name: LobbyMenuUI
   m_TagString: Untagged
@@ -175,6 +177,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 402, y: 904}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1711275339734432205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4077567184552208391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd55699d47a9e7248a234cfc1d0c1f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2287479366635486259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4077567184552208391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56efd9175bd0da40b23f4367e71f12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <StatusUI>k__BackingField: {fileID: 0}
+  <OptionUI>k__BackingField: {fileID: 0}
+  <MonsterInfoUI>k__BackingField: {fileID: 0}
+  <InventoryUI>k__BackingField: {fileID: 0}
+  <InfoButton>k__BackingField: {fileID: 1065562982576567179}
+  <FeedButton>k__BackingField: {fileID: 6422795648559341688}
+  <TrainingButton>k__BackingField: {fileID: 6005393251889916787}
+  <OptionButton>k__BackingField: {fileID: 1370342700717454851}
+  <InventoryButton>k__BackingField: {fileID: 5745012997870823063}
+  <AdventurButton>k__BackingField: {fileID: 7760243722004459737}
 --- !u!1 &5262026979866958236
 GameObject:
   m_ObjectHideFlags: 0
