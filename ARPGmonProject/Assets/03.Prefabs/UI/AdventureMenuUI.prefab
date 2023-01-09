@@ -143,7 +143,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8971679831019807278}
-  - component: {fileID: 5870167623736282938}
+  - component: {fileID: 4823280233862204679}
+  - component: {fileID: 8077784117081157619}
   m_Layer: 0
   m_Name: AdventureMenuUI
   m_TagString: Untagged
@@ -175,7 +176,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 356.1, y: 503.43}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5870167623736282938
+--- !u!114 &4823280233862204679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,14 +185,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1116068769195663703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f6d0e7736e0504ca47bf8896f5e860, type: 3}
+  m_Script: {fileID: 11500000, guid: c882e61ffc3219c489b715725af42873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _backButton: {fileID: 1943162063031853019}
-  _mainUI: {fileID: 0}
-  _backMenu:
-  - {fileID: 0}
-  - {fileID: 0}
+--- !u!114 &8077784117081157619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116068769195663703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a22d75417b4a5499629a2fa30777c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <BackMenu>k__BackingField: []
+  <BackButton>k__BackingField: {fileID: 1943162063031853019}
+  <InventoryUI>k__BackingField: {fileID: 0}
+  <OptionUI>k__BackingField: {fileID: 0}
+  <InventoryButton>k__BackingField: {fileID: 6513413007962355107}
+  <OptionButton>k__BackingField: {fileID: 9060467279835583206}
+  <ExitButton>k__BackingField: {fileID: 2199915247495251188}
 --- !u!1 &2952091564327713864
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,11 +20,13 @@ public class AdventureMainUI : MonoBehaviour
         _menuButton.onClick.AddListener(MenuButton);
     }
 
+//
     public void RotateComplete()
     {
         StatusUI.gameObject.SetActive(true);
     }
 
+//
     public void MenuButton()
     {
         MenuUI.gameObject.SetActive(true);

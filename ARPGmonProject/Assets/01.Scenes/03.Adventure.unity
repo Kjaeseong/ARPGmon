@@ -237,6 +237,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2267236070097874277, guid: f6eede71d010ca34d825a93c5a4240f0, type: 3}
   m_PrefabInstance: {fileID: 29998379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &29998381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8468897475770051713, guid: f6eede71d010ca34d825a93c5a4240f0, type: 3}
+  m_PrefabInstance: {fileID: 29998379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &112804746
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,28 +406,6 @@ Transform:
   m_Father: {fileID: 1170245298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &239576616 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5667356997149191890, guid: e795bef69374e73488bd99f182d85210, type: 3}
-  m_PrefabInstance: {fileID: 1462110933}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1ac729896918f4b80cefb8d898ba39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &264690165 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5613578617929302235, guid: f6eede71d010ca34d825a93c5a4240f0, type: 3}
-  m_PrefabInstance: {fileID: 29998379}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50402cacbd01c8a4c959f300516c9745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &546569198
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,17 +617,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6689188875354301260, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
   m_PrefabInstance: {fileID: 592413060}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &592413063 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2317480878933325493, guid: 31075e5c108d24e49a7f78180f9703e6, type: 3}
-  m_PrefabInstance: {fileID: 592413060}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592413062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e750272478bf3ec419977a387a355138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &647935699
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +756,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1109113964}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PositionCheckerUI, Assembly-CSharp
           m_MethodName: ButtonDown
           m_Mode: 3
@@ -800,7 +772,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1109113964}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PositionCheckerUI, Assembly-CSharp
           m_MethodName: ButtonUp
           m_Mode: 1
@@ -1386,7 +1358,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1109113964}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PositionCheckerUI, Assembly-CSharp
           m_MethodName: ButtonDown
           m_Mode: 3
@@ -1402,7 +1374,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1109113964}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: PositionCheckerUI, Assembly-CSharp
           m_MethodName: ButtonUp
           m_Mode: 1
@@ -1517,6 +1489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1109113963}
+  - component: {fileID: 1109113965}
   - component: {fileID: 1109113964}
   m_Layer: 0
   m_Name: PositionCheckerUI
@@ -1555,16 +1528,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109113962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c88704fb34f9c24ebffe05e3adabd3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 087663f8957f80c488d1cbc126341720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotateLeft: {fileID: 647935701}
-  _rotateRight: {fileID: 933404075}
-  _okButton: {fileID: 1931518194}
-  _checker: {fileID: 1105979924}
-  _nextMenu:
-  - {fileID: 592413062}
+--- !u!114 &1109113965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109113962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6763dfe593c1cba4ea499aa6e432631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RightButton>k__BackingField: {fileID: 933404078}
+  <LeftButton>k__BackingField: {fileID: 647935704}
+  <OKButton>k__BackingField: {fileID: 1931518194}
+  <Checker>k__BackingField: {fileID: 1105979924}
+  <NextMenu>k__BackingField:
   - {fileID: 1232992284}
+  - {fileID: 592413062}
 --- !u!1 &1170245297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,6 +1609,7 @@ GameObject:
   - component: {fileID: 1204710463}
   - component: {fileID: 1204710462}
   - component: {fileID: 1204710461}
+  - component: {fileID: 1204710465}
   - component: {fileID: 1204710464}
   m_Layer: 0
   m_Name: AdventureMainUI
@@ -1727,15 +1713,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1204710459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 168ef809ede8a654e94ee29aa6c3d421, type: 3}
+  m_Script: {fileID: 11500000, guid: a3aa0c7f5b75e774395ca3100d39614c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PositionCheckerUI>k__BackingField: {fileID: 1109113964}
-  <StatusUI>k__BackingField: {fileID: 592413063}
-  <MenuUI>k__BackingField: {fileID: 216414510136431095}
-  <OptionUI>k__BackingField: {fileID: 239576616}
-  <InventoryUI>k__BackingField: {fileID: 264690165}
-  _menuButton: {fileID: 1232992286}
+--- !u!114 &1204710465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204710459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e69d1dae1c95d54b922a1ad17341a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MenuButton>k__BackingField: {fileID: 1232992286}
+  <AdventureMenuUI>k__BackingField: {fileID: 216414510136431093}
 --- !u!1 &1232992284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2249,11 @@ PrefabInstance:
 --- !u!224 &1462110934 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2954677370319296309, guid: e795bef69374e73488bd99f182d85210, type: 3}
+  m_PrefabInstance: {fileID: 1462110933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462110935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4599092860384057423, guid: e795bef69374e73488bd99f182d85210, type: 3}
   m_PrefabInstance: {fileID: 1462110933}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1541016772
@@ -3204,13 +3203,33 @@ PrefabInstance:
     - target: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
       propertyPath: _mainUI
       value: 
-      objectReference: {fileID: 1204710464}
+      objectReference: {fileID: 0}
     - target: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
       propertyPath: _backMenu.Array.data[0]
       value: 
       objectReference: {fileID: 592413062}
     - target: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
       propertyPath: _backMenu.Array.data[1]
+      value: 
+      objectReference: {fileID: 1232992284}
+    - target: {fileID: 8077784117081157619, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
+      propertyPath: <OptionUI>k__BackingField
+      value: 
+      objectReference: {fileID: 1462110935}
+    - target: {fileID: 8077784117081157619, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
+      propertyPath: <InventoryUI>k__BackingField
+      value: 
+      objectReference: {fileID: 29998381}
+    - target: {fileID: 8077784117081157619, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
+      propertyPath: <BackMenu>k__BackingField.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077784117081157619, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
+      propertyPath: <BackMenu>k__BackingField.Array.data[0]
+      value: 
+      objectReference: {fileID: 592413062}
+    - target: {fileID: 8077784117081157619, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
+      propertyPath: <BackMenu>k__BackingField.Array.data[1]
       value: 
       objectReference: {fileID: 1232992284}
     - target: {fileID: 8971679831019807278, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
@@ -3309,14 +3328,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8971679831019807278, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
   m_PrefabInstance: {fileID: 216414510136431092}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &216414510136431095 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5870167623736282938, guid: 9bb4d40d91461844594219eacc43d207, type: 3}
-  m_PrefabInstance: {fileID: 216414510136431092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216414510136431093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f6d0e7736e0504ca47bf8896f5e860, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
